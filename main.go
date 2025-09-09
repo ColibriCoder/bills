@@ -52,5 +52,4 @@ func promptActions(reader *bufio.Reader, bill *bill) {
 		fmt.Println("Neteisingas pasirinkimas");
 		promptActions(reader, bill)
 	}
-
 }
