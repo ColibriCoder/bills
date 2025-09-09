@@ -7,14 +7,12 @@ import (
 	"strconv"
 )
 
-
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	name, _ := getUserInput("Įveskite užsakovo vardą: ", reader)
 	newBill := bill{name: name, items: map[string]float32{}, tip: 0}
 	promptActions(reader, &newBill)
 }
-
 
 func promptActions(reader *bufio.Reader, bill *bill) {
 	action, _ := getUserInput("p - pridėti prekę, s - išsaugoti čekį, a - arbatpinigiai: ", reader);
