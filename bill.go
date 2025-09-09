@@ -5,7 +5,6 @@ import (
 	"os"
 )
 
-
 type bill struct {
 	name string
 	items map[string]float32
@@ -40,9 +39,7 @@ func (b bill) getFormated() string {
 func (b bill) save() {
 	formatedBill := b.getFormated()
 	data := []byte(formatedBill)
-
 	path := "bills/" + b.name + ".txt";
-	
 	err := os.WriteFile(path, data, 0644)
 
 	if err != nil {
